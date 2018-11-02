@@ -61,30 +61,10 @@ Public Class FileRename
 
     Private Sub SelectDirectory() Handles btnSelectDirectory.Click
         Dim folderBrowserDialog As New FolderBrowserDialog
-        Dim fileInfo As FileInfo
 
         Try
             If folderBrowserDialog.ShowDialog() = DialogResult.OK Then
-                txtDirectory.Text = folderBrowserDialog.SelectedPath
-                files = New DirectoryInfo(txtDirectory.Text).GetFiles()
-
-                If files.Length > 0 Then
-                    isDirectoryEmpty = False
-                    fileInfo = files(0)
-                    fileNameLength = fileInfo.Name.Length - fileInfo.Extension.Length
-                    txtIntStartIndex.Text = 0
-                    txtIntLength.Text = fileNameLength
-                    txtOldNamePreview.Text = fileInfo.Name
-                    txtNewNamePreview.Text = txtPrefix.Text & Strings.Left(fileInfo.Name, fileNameLength) & txtSuffix.Text & fileInfo.Extension
-                    txtExtension.Text = fileInfo.Extension
-
-                    With TrackBar
-                        .Minimum = 0
-                        .Maximum = fileNameLength
-                    End With
-                Else
-                    Throw New Exception("Няма намерени файлове!")
-                End If
+                CheckDirectory(folderBrowserDialog.SelectedPath)
             End If
         Catch ex As Exception
             GetMessage(ex.Message, 1)
@@ -174,9 +154,52 @@ Public Class FileRename
 
     Private Sub NavigateHomePage() Handles lblHomePage.LinkClicked
         Try
-            Process.Start("http://sixeightone.eu")
+            Process.Start("http://gnnmobile.eu")
         Catch ex As Exception
             GetMessage(ex.Message, 1)
         End Try
     End Sub
+
+    Private Sub TxtDirectory_TextChanged(sender As Object, e As EventArgs) Handles txtDirectory.TextChanged
+        Try
+            If CheckDirectory(txtDirectory.Text) Then
+                txtDirectory.BackColor = Color.White
+                btnRename.Enabled = True
+            Else
+                txtDirectory.BackColor = Color.Cyan
+                btnRename.Enabled = False
+            End If
+        Catch ex As Exception
+            GetMessage(ex.Message, 1)
+        End Try
+    End Sub
+
+    Private Function CheckDirectory(path As String) As Boolean
+        If Directory.Exists(path) Then
+            txtDirectory.Text = path
+
+            Dim fileInfo As FileInfo
+            files = New DirectoryInfo(path).GetFiles()
+
+            If files.Length > 0 Then
+                isDirectoryEmpty = False
+                fileInfo = files(0)
+                fileNameLength = fileInfo.Name.Length - fileInfo.Extension.Length
+                txtIntStartIndex.Text = 0
+                txtIntLength.Text = fileNameLength
+                txtOldNamePreview.Text = fileInfo.Name
+                txtNewNamePreview.Text = txtPrefix.Text & Strings.Left(fileInfo.Name, fileNameLength) & txtSuffix.Text & fileInfo.Extension
+                txtExtension.Text = fileInfo.Extension
+
+                With TrackBar
+                    .Minimum = 0
+                    .Maximum = fileNameLength
+                End With
+
+                Return True
+            End If
+        End If
+
+        Return False
+    End Function
 End Class

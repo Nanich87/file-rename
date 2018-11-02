@@ -253,16 +253,16 @@ Partial Class FileRename
         Me.lblHomePage.AutoSize = True
         Me.lblHomePage.Location = New System.Drawing.Point(193, 256)
         Me.lblHomePage.Name = "lblHomePage"
-        Me.lblHomePage.Size = New System.Drawing.Size(94, 13)
+        Me.lblHomePage.Size = New System.Drawing.Size(86, 13)
         Me.lblHomePage.TabIndex = 14
         Me.lblHomePage.TabStop = True
-        Me.lblHomePage.Text = "SixEightOne.eu"
+        Me.lblHomePage.Text = "GNNMobile.eu"
         '
         'FileRename
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(419, 278)
+        Me.ClientSize = New System.Drawing.Size(409, 271)
         Me.Controls.Add(Me.lblHomePage)
         Me.Controls.Add(Me.frmNamePreview)
         Me.Controls.Add(Me.TrackBar)
@@ -280,7 +280,7 @@ Partial Class FileRename
         Me.Name = "FileRename"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Преименуване на файлове v1.0"
+        Me.Text = "Преименуване на файлове v1.1"
         Me.frmString.ResumeLayout(False)
         Me.frmString.PerformLayout()
         Me.frmFileName.ResumeLayout(False)
