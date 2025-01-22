@@ -36,7 +36,6 @@ Partial Class FileRename
         Me.lblExtension = New System.Windows.Forms.Label()
         Me.lblSuffix = New System.Windows.Forms.Label()
         Me.lblPrefix = New System.Windows.Forms.Label()
-        Me.lblGooglePlus = New System.Windows.Forms.LinkLabel()
         Me.btnSelectDirectory = New System.Windows.Forms.Button()
         Me.TrackBar = New System.Windows.Forms.TrackBar()
         Me.txtOldNamePreview = New System.Windows.Forms.TextBox()
@@ -175,16 +174,6 @@ Partial Class FileRename
         Me.lblPrefix.TabIndex = 0
         Me.lblPrefix.Text = "Префикс"
         '
-        'lblGooglePlus
-        '
-        Me.lblGooglePlus.AutoSize = True
-        Me.lblGooglePlus.Location = New System.Drawing.Point(131, 256)
-        Me.lblGooglePlus.Name = "lblGooglePlus"
-        Me.lblGooglePlus.Size = New System.Drawing.Size(56, 13)
-        Me.lblGooglePlus.TabIndex = 9
-        Me.lblGooglePlus.TabStop = True
-        Me.lblGooglePlus.Text = "Google+"
-        '
         'btnSelectDirectory
         '
         Me.btnSelectDirectory.Location = New System.Drawing.Point(272, 12)
@@ -251,7 +240,7 @@ Partial Class FileRename
         'lblHomePage
         '
         Me.lblHomePage.AutoSize = True
-        Me.lblHomePage.Location = New System.Drawing.Point(193, 256)
+        Me.lblHomePage.Location = New System.Drawing.Point(314, 256)
         Me.lblHomePage.Name = "lblHomePage"
         Me.lblHomePage.Size = New System.Drawing.Size(86, 13)
         Me.lblHomePage.TabIndex = 14
@@ -267,7 +256,6 @@ Partial Class FileRename
         Me.Controls.Add(Me.frmNamePreview)
         Me.Controls.Add(Me.TrackBar)
         Me.Controls.Add(Me.btnSelectDirectory)
-        Me.Controls.Add(Me.lblGooglePlus)
         Me.Controls.Add(Me.frmFileName)
         Me.Controls.Add(Me.frmString)
         Me.Controls.Add(Me.txtDirectory)
@@ -280,7 +268,7 @@ Partial Class FileRename
         Me.Name = "FileRename"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Преименуване на файлове v1.1"
+        Me.Text = "Преименуване на файлове v1.2"
         Me.frmString.ResumeLayout(False)
         Me.frmString.PerformLayout()
         Me.frmFileName.ResumeLayout(False)
@@ -306,7 +294,6 @@ Partial Class FileRename
     Friend WithEvents lblExtension As System.Windows.Forms.Label
     Friend WithEvents lblSuffix As System.Windows.Forms.Label
     Friend WithEvents lblPrefix As System.Windows.Forms.Label
-    Friend WithEvents lblGooglePlus As System.Windows.Forms.LinkLabel
     Friend WithEvents btnSelectDirectory As System.Windows.Forms.Button
     Friend WithEvents TrackBar As System.Windows.Forms.TrackBar
     Friend WithEvents txtOldNamePreview As System.Windows.Forms.TextBox

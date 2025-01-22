@@ -8,9 +8,9 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{3BA2BB8C-5F40-4E88-95A3-9F8FF82ECD39}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>FileRename.My.MyApplication</StartupObject>
-    <RootNamespace>FileRename</RootNamespace>
-    <AssemblyName>Преименуване на файлове</AssemblyName>
+    <StartupObject>GNN.FileRename.My.MyApplication</StartupObject>
+    <RootNamespace>GNN.FileRename</RootNamespace>
+    <AssemblyName>GNN.FileRename</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -23,7 +23,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Преименуване на файлове.xml</DocumentationFile>
+    <DocumentationFile>GNN.FileRename.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -33,7 +33,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Преименуване на файлове.xml</DocumentationFile>
+    <DocumentationFile>GNN.FileRename.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>

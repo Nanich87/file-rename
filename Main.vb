@@ -39,11 +39,17 @@ Public Class FileRename
 
                     files = New DirectoryInfo(txtDirectory.Text).GetFiles()
                     For Each file As FileInfo In files
-                        If startIndex + length > file.Name.Length - file.Extension.Length Then
+                        Dim tempLength = length
+
+                        If tempLength = -1 Then
+                            tempLength = file.Name.Length - file.Extension.Length - startIndex
+                        End If
+
+                        If startIndex + tempLength > file.Name.Length - file.Extension.Length Then
                             Continue For
                         End If
 
-                        fileName = txtPrefix.Text & file.Name.Substring(startIndex, length) & txtSuffix.Text & txtExtension.Text
+                        fileName = txtPrefix.Text & file.Name.Substring(startIndex, tempLength) & txtSuffix.Text & txtExtension.Text
                         file.MoveTo(txtDirectory.Text & Path.DirectorySeparatorChar & fileName)
                     Next file
 
@@ -144,17 +150,9 @@ Public Class FileRename
         End Select
     End Sub
 
-    Private Sub NavigateGooglePlus() Handles lblGooglePlus.LinkClicked
-        Try
-            Process.Start("https://plus.google.com/102163636733230695963")
-        Catch ex As Exception
-            GetMessage(ex.Message, 1)
-        End Try
-    End Sub
-
     Private Sub NavigateHomePage() Handles lblHomePage.LinkClicked
         Try
-            Process.Start("http://gnnmobile.eu")
+            Process.Start("https://gnnmobile.eu")
         Catch ex As Exception
             GetMessage(ex.Message, 1)
         End Try

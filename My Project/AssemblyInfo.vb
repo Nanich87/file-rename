@@ -9,11 +9,11 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("Преименуване на множество файлове със запазване на част от името, добавяне на префикс или суфикс, смяна на разширение...")> 
-<Assembly: AssemblyDescription("Преименуване на множество файлове със запазване на част от името, добавяне на префикс или суфикс, смяна на разширение...")> 
-<Assembly: AssemblyCompany("SixEightOne.eu")> 
-<Assembly: AssemblyProduct("Преименуване на файлове")> 
-<Assembly: AssemblyCopyright("Copyright © 2013 by SixEightOne.eu")> 
-<Assembly: AssemblyTrademark("SixEightOne.eu")> 
+<Assembly: AssemblyDescription("Преименуване на множество файлове със запазване на част от името, добавяне на префикс или суфикс, смяна на разширение...")>
+<Assembly: AssemblyCompany("GNNMobile.eu")>
+<Assembly: AssemblyProduct("Преименуване на файлове")>
+<Assembly: AssemblyCopyright("Copyright © 2025 by GNNMobile.eu")>
+<Assembly: AssemblyTrademark("GNNMobile.eu")>
 
 <Assembly: ComVisible(False)>
 
