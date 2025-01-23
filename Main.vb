@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports System.Reflection
 
 Public Class FileRename
     Private files() As FileInfo
@@ -53,9 +54,9 @@ Public Class FileRename
                         file.MoveTo(txtDirectory.Text & Path.DirectorySeparatorChar & fileName)
                     Next file
 
-                    MsgBox("Файловете бяха преименувани успешно!", MsgBoxStyle.OkOnly, "Преименуване на файлове")
+                    MsgBox(My.Resources.FilesRenamedSuccessfully(), MsgBoxStyle.OkOnly, My.Resources.FileRename())
                 Else
-                    Throw New DirectoryNotFoundException("Не съществува такава директория!")
+                    Throw New DirectoryNotFoundException(My.Resources.DirectoryNotFound())
                 End If
             End If
         Catch ex As DirectoryNotFoundException
@@ -117,7 +118,7 @@ Public Class FileRename
                         .Maximum = length
                     End With
                 Else
-                    Throw New Exception(String.Format("Началният индекс {0} на низа е по-голям от неговата дължината {1}!", startIndex, fileNameLength))
+                    Throw New Exception(String.Format(My.Resources.StartIndexIsGreaterThanLength(), startIndex, fileNameLength))
                 End If
             End If
         Catch ex As Exception
@@ -142,11 +143,11 @@ Public Class FileRename
     Private Sub GetMessage(ByVal message As String, ByVal type As Integer)
         Select Case type
             Case 1
-                MsgBox(message, MsgBoxStyle.Exclamation, "Внимание")
+                MsgBox(message, MsgBoxStyle.Exclamation, My.Resources.Warning())
             Case 2
-                MsgBox(message, MsgBoxStyle.Critical, "Критична грешка")
+                MsgBox(message, MsgBoxStyle.Critical, My.Resources.CriticalError())
             Case Else
-                MsgBox(message, MsgBoxStyle.Information, "Информация")
+                MsgBox(message, MsgBoxStyle.Information, My.Resources.Information())
         End Select
     End Sub
 

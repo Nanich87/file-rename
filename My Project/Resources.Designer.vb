@@ -59,5 +59,68 @@ Namespace My.Resources
                 resourceCulture = value
             End Set
         End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Критична грешка.
+        '''</summary>
+        Friend ReadOnly Property CriticalError() As String
+            Get
+                Return ResourceManager.GetString("CriticalError", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Не съществува такава директория..
+        '''</summary>
+        Friend ReadOnly Property DirectoryNotFound() As String
+            Get
+                Return ResourceManager.GetString("DirectoryNotFound", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Преименуване на файлове.
+        '''</summary>
+        Friend ReadOnly Property FileRename() As String
+            Get
+                Return ResourceManager.GetString("FileRename", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Файловете бяха преименувани успешно..
+        '''</summary>
+        Friend ReadOnly Property FilesRenamedSuccessfully() As String
+            Get
+                Return ResourceManager.GetString("FilesRenamedSuccessfully", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Информация.
+        '''</summary>
+        Friend ReadOnly Property Information() As String
+            Get
+                Return ResourceManager.GetString("Information", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Началният индекс {0} на низа е по-голям от неговата дължината {1}!.
+        '''</summary>
+        Friend ReadOnly Property StartIndexIsGreaterThanLength() As String
+            Get
+                Return ResourceManager.GetString("StartIndexIsGreaterThanLength", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to Внимание.
+        '''</summary>
+        Friend ReadOnly Property Warning() As String
+            Get
+                Return ResourceManager.GetString("Warning", resourceCulture)
+            End Get
+        End Property
     End Module
 End Namespace
